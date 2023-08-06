@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Zilla+Slab:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --card-color: #ffffff;
+    --card-color-active: #f9fdff;
+    --shadow-color: #b9b9b9;
+    --primary-text-color: #1e1d1d;
+    --secondary-text-color: #444444;
+    --accent-color: #27b986;
+    --accent-color-dark: #19765d;
+    --background-color: #ffffff;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: "Candal", sans-serif;
+    color: var(--primary-text-color);
+}
+
+p{
+    font-family: "Zilla Slab", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 1500px;
+    margin-inline: auto;
+    overflow: hidden;
+}
