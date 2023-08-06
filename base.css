@@ -10,7 +10,7 @@
     --card-color: #ffffff;
     --card-color-active: #f9fdff;
     --shadow-color: #b9b9b9;
-    --primary-text-color: #1e1d1d;
+    --primary-text-color: #1f1f1f;
     --secondary-text-color: #444444;
     --accent-color: #27b986;
     --accent-color-dark: #19765d;
@@ -46,4 +46,9 @@ ul{
     max-width: 1500px;
     margin-inline: auto;
     overflow: hidden;
+}
+
+h6{
+    font-family: "Zilla Slab";
+    color: var(--primary-text-color);
 }

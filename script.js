@@ -19,6 +19,31 @@ function bindData(articles){
     articles.forEach(article => {
         if(!article.urlToImage) return;
         let cardClone = newsCardTemplate.content.cloneNode(true);
+        fillDataInCard(cardClone,article);
         cardsContainer.appendChild(cardClone);
     });
+}
+
+function fillDataInCard(cardClone,article){
+    let newsImage = cardClone.querySelector('#news-image');
+    let newsTitle = cardClone.querySelector('#news-title');
+    let newsSource = cardClone.querySelector('#news-source');
+    let newsDesc = cardClone.querySelector('#news-desc');
+
+    let date = new Date(article.publishedAt).toLocaleString('eng-us', {
+        timeZone: "Asia/Jakarta"
+    });
+
+    newsImage.src = article.urlToImage;
+    newsTitle.innerHTML = article.title;
+    newsDesc.innerHTML = article.description;
+    newsSource.innerHTML = `${article.source.name} . ${date}`; 
+
+    cardClone.firstElementChild.addEventListener('click',()=>{
+        window.open(article.url,"_blank")
+    })
+}
+
+function onNavBarClick(navItems) {
+    fetchNews(navItems)
 }
